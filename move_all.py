@@ -1,3 +1,9 @@
+'''
+Este programa une los modulos anteriormente
+programados con la funcionalidad de clasificar y
+mover los archivos a las carpetas correspondientes
+'''
+
 import os
 import shutil
 
@@ -42,7 +48,8 @@ for archivo in archivos:
 # movemos videos
 for archivo in archivos:
 
-    if archivo.lower().endswith((".mp4", ".avi", ".mov", ".mkv", ".wmv", ".flv", ".mpeg", ".mpg", ".webm")):
+    if archivo.lower().endswith((".mp4", ".avi", ".mov", ".mkv", ".wmv",
+                                 ".flv", ".mpeg", ".mpg", ".webm")):
 
         origen = os.path.join(downloads, archivo)
         destino = os.path.join(vids, archivo)
