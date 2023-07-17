@@ -9,6 +9,8 @@ archivos = os.listdir(downloads)
 
 moved = False
 
+cont = 0
+
 for archivo in archivos:
 
     if archivo.lower().endswith((".png", ".jpg", ".jpeg", ".gif")):
@@ -17,9 +19,11 @@ for archivo in archivos:
         destino = os.path.join(images, archivo)
 
         shutil.move(origen, destino)
+        cont = cont + 1
         moved = True
 
 if moved:
     print("Archivos movidos correctamente")
+    print(f"{cont} archivos movidos")
 else:
     print("No se encontro/movio ningún archivo")
