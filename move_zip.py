@@ -3,7 +3,7 @@ import shutil
 
 # replace with your own folders route
 downloads = r"C:\Users\aeropink\Downloads"
-images = r"C:\Users\aeropink\Pictures"
+comp = r"C:\Users\aeropink\Documents\comprimidos"
 
 archivos = os.listdir(downloads)
 
@@ -11,10 +11,10 @@ moved = False
 
 for archivo in archivos:
 
-    if archivo.lower().endswith((".png", ".jpg", ".jpeg", ".gif")):
+    if archivo.lower().endswith((".zip", ".rar")):
 
         origen = os.path.join(downloads, archivo)
-        destino = os.path.join(images, archivo)
+        destino = os.path.join(comp, archivo)
 
         shutil.move(origen, destino)
         moved = True
